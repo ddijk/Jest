@@ -1,0 +1,15 @@
+# new project:
+npm init
+
+# add jest
+npm install jest-cli --save-dev
+
+# disable Window object for non-DOM  tests, in package.json:
+"devDependencies": {
+    "jest-cli": "^24.9.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
+

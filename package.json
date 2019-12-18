@@ -1,0 +1,21 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "'demo of javascript testing with Jest'",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "jest",
+    "javascript"
+  ],
+  "author": "Dick Dijk",
+  "license": "ISC",
+  "devDependencies": {
+    "jest-cli": "^24.9.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
