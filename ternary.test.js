@@ -11,3 +11,30 @@ test ('test ternary' , ()=> {
 const fie= (method, content) => {
     return method? method: content!=null?'POST':'GET';
 }
+
+
+test ('"or" test GET', ()=>{
+    expect(orFie('GET')).toEqual('GET');
+})
+test ('"or" test DELETE', ()=>{
+    expect(orFie('DELETE')).toEqual('DELETE');
+})
+test ('"or" test POST', ()=>{
+    expect(orFie('POST')).toEqual('POST');
+})
+test ('"or" test default GET without content', ()=>{
+    expect(orFie()).toEqual('GET');
+})
+test ('"or" test default POST with content', ()=>{
+    expect(orFie(undefined,'body')).toEqual('POST');
+})
+test ('"or" test POST with content', ()=>{
+    expect(orFie('POST','body')).toEqual('POST');
+})
+test ('"or" test DELETE with content', ()=>{
+    expect(orFie('DELETE','body')).toEqual('DELETE');
+})
+const orFie=(method, content)=>{
+     return method ? method : content != null ? 'POST' : 'GET';
+
+}
