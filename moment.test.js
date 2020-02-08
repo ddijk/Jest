@@ -7,11 +7,11 @@ test ("play with moment JS, ref not equal?", () =>{
     expect(moment()).not.toBe( moment());
 })
 
-test ("play with moment JS, value equal?", () =>{
+// test ("play with moment JS, value equal?", () =>{
 
 
-    expect(moment()).toEqual( moment());
-})
+//     expect(moment()).not.toEqual( moment());
+// })
 test ("play with moment JS, compare serialized to String", () =>{
 
 
@@ -39,13 +39,13 @@ test ("play with moment JS, Double =?", () =>{
 })
 
 test.skip ("play with moment JS, hours", ()=>{
-    const today = moment();
+    const today = moment("0420", "HHmm");
 
     expect(String(Number(today.format('hh'))+1)).toEqual("4");
 })
 
 test ("play with moment JS, months", ()=>{
-    const mon = moment().format("MM");
+    const mon = moment("20200120").format("MM");
 
     expect(String(Number(mon))).toEqual("1");
 })
